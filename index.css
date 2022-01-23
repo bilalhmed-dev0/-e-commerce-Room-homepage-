@@ -28,10 +28,15 @@ nav{
     width: 50%;
     position: absolute;
     top: 50px;
+    margin-left: 50px;
    
 }
 h3{
     color: white;
+    position: absolute;
+    top: 48px;
+    left: 20px;
+    align-items: center;
 }
 li{
     list-style: none;
@@ -48,10 +53,14 @@ a:hover{
     position: absolute;
     top: 50px;
     left: 450px;
-    display: none;
+    visibility: hidden;
+    cursor: pointer;
+    
 
 }
-.btn-line{
+.btn-line1,
+.btn-line2,
+.btn-line3{
     width: 100%;
     height: 5px;
     background: white;
@@ -115,7 +124,6 @@ p{
 .div3{
     width: 200px;
     height: 220px;
-   /*  background: chartreuse; */
     background-image: url("images/image-about-dark.jpg");
     background-size: cover;
     flex-grow: 1;
@@ -140,8 +148,87 @@ h2{
 .div5{
     width: 200px;
     height: 220px;
-   /*  background: darkblue; */
     background-image: url("images/image-about-light.jpg");
     background-size: cover;
     flex-grow: 1;
+}
+
+
+/* making it responsive */
+@media (max-width:500px) {
+   body{
+       width: 100%;
+       overflow-x: hidden;
+   }
+    section{
+       display: flex;
+       flex-direction: column; 
+    }
+    a{
+        color: #000;
+    }
+    .div1{
+        width: 100%;
+    }
+    .div2{
+        width: 100%;
+    }
+  
+    .div3{
+        width: 100%;
+    }
+    .div4{
+        width: 100%;
+    }
+    .div5{
+        width: 100%;
+    }
+    .carousel{
+        position: absolute;
+        top: -50px;
+        right: 0px;
+        width: 30%;
+    }
+    nav{
+        visibility: hidden;
+    }
+    nav.active{
+        visibility: visible;
+       background: white;
+        width: 100%;
+        height: 80px;
+        position: absolute;
+        top: 0px;
+        left: -10px;
+    }
+    .menu-btn.active .btn-line1{
+        transform: rotate(45deg) translate(7px , 7px);
+    }
+    .menu-btn.active.btn-line2{
+        opacity: 0;
+    }
+    .menu-btn.active.btn-line3{
+        transform: rotate(-45deg) translate(7px , -7px);
+    }
+    
+    
+    h3{
+        position: absolute;
+        left: 160px;
+        font-size: 40px;
+        top: 20px;
+       
+    }
+    .menu-btn{
+        visibility: visible;
+        position: absolute;
+        left: 0px;
+        top: 27px;
+    }
+    .p1{
+        position: absolute;
+        left: 50px;
+        top: 350px;
+    }
+    
 }
