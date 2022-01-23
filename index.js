@@ -12,7 +12,7 @@ menuBtn.addEventListener('click' , ()=>{
 })
 
 
-
+git 
 //dealing with the slider
 let images = ["images/desktop-image-hero-1.jpg","images/desktop-image-hero-2.jpg", "images/desktop-image-hero-3.jpg"];
 let counter = 0;
